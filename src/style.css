@@ -349,3 +349,10 @@ html[data-route-loading]::before {
     border-right-color: var(--border);
   }
 }
+
+.homepage_banner {
+  background-image: url("/public/homepage_banner.jpg");
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 200px;
+}

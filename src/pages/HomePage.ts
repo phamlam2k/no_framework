@@ -6,6 +6,8 @@ const HomePage: PageComponent = ctx => {
   const page = document.createElement("section");
   page.innerHTML = `
     <h1>Trang chủ</h1>
+    <img src="/homepage_banner.jpg" alt="something" />
+    <div class="homepage_banner"></div>
     <button type="button" id="go-to-user">Mở người dùng 42</button>
   `;
 

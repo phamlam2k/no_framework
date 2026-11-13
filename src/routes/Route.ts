@@ -105,11 +105,13 @@ class Router {
     this.pending = controller;
 
     const route = find(this.routes, item => item.pattern.test(url.pathname));
+
+    if (!route) throw new Error(`Không có route cho "${url.pathname}"`);
+    
     const ctx = createContext(url, signal, route);
     let content: PageResult;
 
     try {
-      if (!route) throw new Error(`Không có route cho "${url.pathname}"`);
       content = await route.component(ctx);
     } catch (error) {
       if (signal.aborted) return;
